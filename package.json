@@ -1,0 +1,19 @@
+{
+  "name": "paper-css",
+  "version": "0.1.0",
+  "description": "Paper CSS for happy printing",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cognitom/paper-css.git"
+  },
+  "keywords": [
+    "css",
+    "print"
+  ],
+  "author": "Tsutomu Kawamura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cognitom/paper-css/issues"
+  },
+  "homepage": "https://github.com/cognitom/paper-css"
+}
