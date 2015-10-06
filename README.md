@@ -15,7 +15,7 @@ Load paper-css into `<head>` like this:
 
 ```html
 <!-- Load paper.css for happy printing -->
-<link rel="stylesheet" href="../dist/paper.css">
+<link rel="stylesheet" href="dist/paper.css">
 
 <!-- Set page size here: A5, A4 or A3 -->
 <!-- Set also "landscape" if you need -->
