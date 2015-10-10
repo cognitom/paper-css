@@ -1,6 +1,6 @@
 # Paper CSS for happy printing
 
-Recently, we say "front-end" everyday. Then why we don't make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just a small snippet of the CSS, but it help us create them in browser easily.
+Recently, we say "front-end" everyday. Then why don't we make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just a small snippet of CSS, but it helps us create them in browser easily.
 
 ## Previewable
 
@@ -62,7 +62,7 @@ See also [the examples](examples/) for detail.
 
 ## Try
 
-Download or clone this repo, then execute command bellow:
+Download or clone this repo, then execute the commands bellow:
 
 ```bash
 $ cd to/this/repo
