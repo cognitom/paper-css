@@ -1,6 +1,6 @@
 # Paper CSS for happy printing
 
-Recently, we say "front-end" more and more. Then why we don't make the printing documents in front-end? We believe we don't need to make it in back-end anymore. Paper CSS is just a small snippet of the CSS, but it make us possible to create them in browser easily.
+Recently, we say "front-end" everyday. Then why we don't make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just a small snippet of the CSS, but it help us create them in browser easily.
 
 ## Previewable
 
