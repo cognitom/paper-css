@@ -1,12 +1,29 @@
 # Paper CSS for happy printing
 
+Recently, we say "front-end" more and more. Then why we don't make the printing documents in front-end? We believe we don't need to make it in back-end anymore. Paper CSS is just a small snippet of the CSS, but it make us possible to create them in browser easily.
+
+## Previewable
+
+You can check the design and layout before printing. See the browser like when you build a webpage.
+
+![Preview](images/preview.png)
+
+[This example](examples/receipt.html) could be printed like this.
+
+![Dialog](images/dialog.png)
+
+## Live-reloading
+
+It's just HTML/CSS, so we can edit it with live-reloading. See [gulpfile.babel.js](gulpfile.babel.js) for more detail.
+
+![Live reloading](images/live-reload.png)
 
 ## Installation
 
 Get paper-css from npm:
 
 ```bash
-npm install paper-css
+$ npm install paper-css
 ```
 
 ## Usage
@@ -42,3 +59,15 @@ Set the class of `<body>` and set also "sheet" for each sheet.
 ```
 
 See also [the examples](examples/) for detail.
+
+## Try
+
+Download or clone this repo, then execute command bellow:
+
+```bash
+$ cd to/this/repo
+$ npm install
+$ npm start
+```
+
+The browser will show the receipt example automatically. Edit the file `examples/receipt.html`, you'll find the preview on the browser be reloaded each time when you save it.

@@ -1,6 +1,6 @@
 {
   "name": "paper-css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Paper CSS for happy printing",
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/cognitom/paper-css/issues"
   },
-  "homepage": "https://github.com/cognitom/paper-css"
+  "homepage": "https://github.com/cognitom/paper-css",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "browser-sync": "^2.9.10",
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "start": "gulp watch"
+  }
 }
