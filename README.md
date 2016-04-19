@@ -14,7 +14,7 @@ You can check the design and layout before printing. See the browser like when y
 
 ## Live-reloading
 
-It's just HTML/CSS, so we can edit it with live-reloading. See [gulpfile.babel.js](gulpfile.babel.js) for more detail.
+It's just HTML/CSS, so we can edit it with live-reloading. See "Try" section below and [gulpfile.babel.js](gulpfile.babel.js) for more detail.
 
 ![Live reloading](images/live-reload.png)
 
@@ -71,3 +71,14 @@ $ npm start
 ```
 
 The browser will show the receipt example automatically. Edit the file `examples/receipt.html`, you'll find the preview on the browser be reloaded each time when you save it.
+
+## Comparisons
+
+type | expression | learning cost | editable | in-browser | multipage
+:-- | :-- | :-- | :-- | :-- | :--
+HTML | Enough | already known | No | OK | ~100 pages \*
+SVG | Enough | not so difficult | No | OK |
+PDF | Perfect | difficult | No | NG | no limit \*\*
+Excel | Not cool | *sigh* | Yes | NG | uncontrollable
+
+\* It depends on user's environment. \*\* Only if you have huge memory on the server.
