@@ -14,7 +14,7 @@ You can check the design and layout before printing. See the browser like when y
 
 ## Live-reloading
 
-It's just HTML/CSS, so we can edit it with live-reloading. See "Try" section below and [gulpfile.babel.js](gulpfile.babel.js) for more detail.
+It's just HTML/CSS, so we can edit it with live-reloading. See "Try" section below.
 
 ![Live reloading](images/live-reload.png)
 
@@ -71,6 +71,8 @@ $ npm start
 ```
 
 The browser will show the receipt example automatically. Edit the file `examples/receipt.html`, you'll find the preview on the browser be reloaded each time when you save it.
+
+Check [browser-sync](https://browsersync.io) for more details about *live reloading*.
 
 ## Comparisons
 

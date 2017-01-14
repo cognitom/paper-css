@@ -17,11 +17,9 @@
   },
   "homepage": "https://github.com/cognitom/paper-css",
   "devDependencies": {
-    "babel-core": "^5.8.25",
-    "browser-sync": "^2.9.10",
-    "gulp": "^3.9.0"
+    "browser-sync": "^2.18.6"
   },
   "scripts": {
-    "start": "gulp watch"
+    "start": "browser-sync start --server './' --startPath 'examples/receipt.html' --no-notify --files '**/*.html, **/*.css'"
   }
 }
