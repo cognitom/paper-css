@@ -1,0 +1,16 @@
+This CLI tool provides you a easy way to generate PDF from your HTML file.
+
+Usage
+  $ paper <file>
+  $ paper <url>
+
+Options
+  --size,       -s  Paper size (A5, A4, A3...)
+  --output,     -o  Path to export PDF
+  --landscape,  -l  Landscape
+  --background, -b  Print background
+  --wait            Waiting time (msec) before printing
+
+Examples
+  $ paper receipt.html --size A5
+  $ paper http://localhost:3000/receipt.html --landscape
