@@ -2,6 +2,12 @@
   "name": "paper-css",
   "version": "0.1.3",
   "description": "Paper CSS for happy printing",
+  "bin": "./bin/paper.js",
+  "files": [
+    "bin",
+    "lib",
+    "paper.css"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cognitom/paper-css.git"
