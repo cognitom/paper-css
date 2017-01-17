@@ -2,7 +2,7 @@
 
 > Front-end printing solution - previewable and live-reloadable!
 
-Recently, we say "front-end" everyday. Then why don't we make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just a small snippet of CSS, but it helps us create them in browser easily.
+Recently, we say "front-end" everyday. Then why don't we make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just [a small snippet of CSS](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css), but it helps us create them in browser easily.
 
 - ***New!***: HTML --> PDF generation via CLI. [See detail here](CLI).
 
@@ -10,8 +10,11 @@ Recently, we say "front-end" everyday. Then why don't we make the printing docum
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Try](#try)
 - [CLI](#cli)
+  - [preview](#preview)
+  - [create](#create)
+  - [export](#export)
+- [Try](#try)
 - Why Paper CSS?
   - [Previewable](#previewable)
   - [Live-reloading](#live-reloading)
@@ -20,7 +23,9 @@ Recently, we say "front-end" everyday. Then why don't we make the printing docum
 
 ## Installation
 
-Get paper-css from npm:
+Download [paper.css](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css) file from GitHub directly.
+
+Or get paper-css from npm:
 
 ```bash
 $ npm install paper-css
@@ -60,49 +65,67 @@ Set the class of `<body>` and set also "sheet" for each sheet.
 
 See also [the examples](examples/) for detail.
 
-## Try
-
-Download or clone this repo, then execute the commands bellow:
-
-```bash
-$ cd to/this/repo
-$ npm install
-$ npm start
-```
-
-The browser will show the receipt example automatically. Edit the file `examples/receipt.html`, you'll find the preview on the browser be reloaded each time when you save it.
-
-Check [browser-sync](https://browsersync.io) for more details about *live reloading*.
-
 ## CLI
 
-We have small tool for PDF generation from your HTML document with ease. To use Paper CSS as a CLI tool, install it in global:
+We have small tool for previewing and PDF generation with ease. To use Paper CSS as a CLI tool, install it in global:
 
 ```bash
 $ npm install --global paper-css
 ```
 
-### File or URL
+**Note**: to use Paper CSS as just CSS, you don't have to install CLI tool.
 
-`paper` command supports file and url both:
+`paper` has three subcommands:
+
+- [preview](#preview)
+- [create](#create)
+- [export](#export)
+
+### preview
+
+Preview your HTML file with live-reloading. The command below starts the preview server and open the HTML document in your browser automatically:
 
 ```bash
-$ paper your-document.html
+$ paper preview <file>
 ```
 
-or
+You can also omit `preview` subcommand. Simply type like this:
 
 ```bash
-$ paper http://somewhere.com/your-document.html
+$ paper <file>
 ```
 
-You'll get a PDF file generated.
+If you have no document yet, check [our examples](examples/) and the next section.
 
-### CLI options
+**Note**: `paper preview` doesn't have any option at this point.
+
+### create
+
+```bash
+$ paper create <file>
+```
+
+Or use this shortcut: `$ paper c <file>`
 
 All options are optional.
 
-- `--size` or `-s`: page size (`A5`, `A4`, `A3`,...)
+- `--size` or `-s`: page size - `A4`, `A5`, `A3`
+- `--padding`: padding - `10mm`, `15mm`, `20mm`, `25mm`, `none`
+- `--landscape` or `-l`: landscape mode
+
+### export
+
+Export your HTML as PDF. The command below generates a PDF file.
+
+```bash
+$ paper export <file>
+```
+
+Or use this shortcut: `$ paper e <file>`
+
+All options are optional.
+
+- `--size` or `-s`: page size - `A4`, `A5`, `A3`
 - `--landscape` or `-l`: in landscape orientation
 - `--background` or `-b`: with background images or color
 - `--wait`: waiting time (msec) before printing
@@ -110,10 +133,38 @@ All options are optional.
 
 \* Note that *the value in CSS* is prior over options above, so you don't have to set `--size` or `--landscape` basically.
 
-Here's a full example of usage:
+Here's an example of usage:
 
 ```bash
-$ paper your-document.html --size A5 --landascape --background --wait 3000 --output any/location/your-document.pdf
+$ paper export your-document.html --background --wait 3000 --output any/location/your-document.pdf
+```
+
+## Try
+
+If you haven't have our CLI yet, install it:
+
+```bash
+$ npm install --global paper-css
+```
+
+Create an empty HTML document:
+
+```bash
+$ paper create first.html --size A5 --landscape
+
+```
+
+Open it in your favorite editor and open preview in the browser:
+
+```bash
+$ atom first.html
+$ paper first.html
+```
+
+Edit the file and save your change. Then the preview will be automatically reloaded. To export it as PDF, type a command below:
+
+```bash
+$ paper export first.html
 ```
 
 ## Why Paper CSS?
@@ -130,7 +181,7 @@ You can check the design and layout before printing. See the browser like when y
 
 ### Live-reloading
 
-It's just HTML/CSS, so we can edit it with live-reloading. See "Try" section below.
+It's just HTML/CSS, so we can edit it with live-reloading. See [preview](#preview) section above.
 
 ![Live reloading](images/live-reload.png)
 
