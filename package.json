@@ -6,7 +6,8 @@
   "files": [
     "bin",
     "lib",
-    "paper.css"
+    "paper.css",
+    "paper.min.css"
   ],
   "repository": {
     "type": "git",
