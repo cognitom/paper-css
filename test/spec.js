@@ -16,7 +16,7 @@ describe('paper-cli', function () {
 
   it('starts a static server', async function () {
     const port = await findPort()
-    const server = startServer(root, port)
+    const server = await startServer(root, port)
     const file = 'test/fixture/white.html'
     const url = `http://localhost:${port}/${file}`
     const actual = await request(url)
