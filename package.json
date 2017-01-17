@@ -2,7 +2,9 @@
   "name": "paper-css",
   "version": "0.2.0",
   "description": "Paper CSS for happy printing",
-  "bin": "./bin/paper.js",
+  "bin": {
+    "paper": "./bin/paper.js"
+  },
   "files": [
     "bin",
     "lib",
