@@ -1,12 +1,13 @@
 {
   "name": "paper-css",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Paper CSS for happy printing",
   "bin": "./bin/paper.js",
   "files": [
     "bin",
     "lib",
-    "paper.css"
+    "paper.css",
+    "paper.min.css"
   ],
   "repository": {
     "type": "git",
