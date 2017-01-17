@@ -131,7 +131,7 @@ All options are optional.
 - `--wait`: waiting time (msec) before printing
 - `--output` or `-o`: where to export PDF
 
-\* Note that *the value in CSS* is prior over options above, so you don't have to set `--size` or `--landscape` basically.
+**Note**: *the value in CSS* is prior over options above, so you don't have to set `--size` or `--landscape` basically.
 
 Here's an example of usage:
 
