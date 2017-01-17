@@ -38,12 +38,15 @@
     "serve-static": "^1.11.1"
   },
   "devDependencies": {
+    "clean-css": "^3.4.23",
     "mocha": "^3.2.0",
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3",
     "standard": "^8.6.0"
   },
   "scripts": {
+    "build": "npm run minify && npm run export",
+    "minify": "cleancss paper.css -o paper.min.css",
     "test": "npm run standard && npm run mocha",
     "standard": "standard lib/* test/*",
     "mocha": "mocha --require reify --require async-to-gen/register test/*.js",
