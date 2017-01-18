@@ -23,9 +23,13 @@ Recently, we say "front-end" everyday. Then why don't we make the printing docum
 
 ## Installation
 
-Download [paper.css](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css) file from GitHub directly.
+Get Paper CSS from [cdnjs](https://cdnjs.com/libraries/paper-css) (recommended):
 
-Or get paper-css from npm:
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.2.3/paper.css">
+```
+
+Or download [paper.css](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css) file from GitHub manually, or via npm:
 
 ```bash
 $ npm install paper-css
