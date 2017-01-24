@@ -1,5 +1,7 @@
 # Paper CSS for happy printing
 
+[![CDNJS](https://img.shields.io/cdnjs/v/paper-css.svg)](https://cdnjs.com/libraries/paper-css)
+
 > Front-end printing solution - previewable and live-reloadable!
 
 Recently, we say "front-end" everyday. Then why don't we make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just [a small snippet of CSS](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css), but it helps us create them in browser easily.
