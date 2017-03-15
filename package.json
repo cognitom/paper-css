@@ -2,9 +2,6 @@
   "name": "paper-css",
   "version": "0.2.3",
   "description": "Paper CSS for happy printing",
-  "bin": {
-    "paper": "./bin/paper.js"
-  },
   "files": [
     "bin",
     "lib",
@@ -27,33 +24,15 @@
     "url": "https://github.com/cognitom/paper-css/issues"
   },
   "homepage": "https://github.com/cognitom/paper-css",
-  "dependencies": {
-    "async-to-gen": "^1.3.0",
-    "connect": "^3.5.0",
-    "connect-livereload": "^0.6.0",
-    "fs-promise": "^1.0.0",
-    "livereload": "^0.6.0",
-    "meow": "^3.7.0",
-    "nightmare": "^2.9.1",
-    "opn": "^4.0.2",
-    "portfinder": "^1.0.10",
-    "reify": "^0.4.4",
-    "serve-static": "^1.11.1"
-  },
   "devDependencies": {
     "clean-css": "^3.4.23",
-    "mocha": "^3.2.0",
-    "request": "^2.79.0",
-    "request-promise-native": "^1.0.3",
-    "standard": "^8.6.0"
+    "electron-pdf": "^1.2.0",
+    "live-server": "^1.2.0"
   },
   "scripts": {
     "build": "npm run minify && npm run export",
     "minify": "cleancss paper.css -o paper.min.css",
-    "test": "npm run standard && npm run mocha",
-    "standard": "standard lib/* test/*",
-    "mocha": "mocha --require reify --require async-to-gen/register test/*.js",
-    "preview": "./bin/paper.js examples/receipt.html",
-    "export": "./bin/paper.js export examples/receipt.html --output images/receipt.pdf"
+    "preview": "live-server examples/receipt.html",
+    "export": "electron-pdf examples/receipt.html images/receipt.pdf"
   }
 }

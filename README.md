@@ -4,19 +4,14 @@
 
 > Front-end printing solution - previewable and live-reloadable!
 
-Recently, we say "front-end" everyday. Then why don't we make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just [a small snippet of CSS](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css), but it helps us create them in browser easily.
-
-- ***New!***: HTML --> PDF generation via CLI. [See detail here](CLI).
+Recently, we say "front-end" every day. Then why don't we make the printing documents in front-end? We believe we can make it perfectly without back-end. Paper CSS is just [a small snippet of CSS](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css), but it helps us create them in browser easily.
 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [CLI](#cli)
-  - [preview](#preview)
-  - [create](#create)
-  - [export](#export)
-- [Try](#try)
+- [Basic Usage](#basic-usage)
+- [Live Preview](#live-preview)
+- [PDF Generation](#pdf-generation)
 - Why Paper CSS?
   - [Previewable](#previewable)
   - [Live-reloading](#live-reloading)
@@ -28,7 +23,7 @@ Recently, we say "front-end" everyday. Then why don't we make the printing docum
 Get Paper CSS from [cdnjs](https://cdnjs.com/libraries/paper-css) (recommended):
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.2.3/paper.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
 ```
 
 Or download [paper.css](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css) file from GitHub manually, or via npm:
@@ -37,7 +32,7 @@ Or download [paper.css](https://raw.githubusercontent.com/cognitom/paper-css/mas
 $ npm install paper-css
 ```
 
-## Usage
+## Basic Usage
 
 Load paper-css into `<head>` like this:
 
@@ -50,7 +45,7 @@ Load paper-css into `<head>` like this:
 <style>@page { size: A5 }</style>
 ```
 
-Set the class of `<body>` and set also "sheet" for each sheet.
+Set the class of `<body>` and also set "sheet" for each sheet.
 
 ```html
 <!-- Set "A5", "A4" or "A3" for class name -->
@@ -71,113 +66,47 @@ Set the class of `<body>` and set also "sheet" for each sheet.
 
 See also [the examples](examples/) for detail.
 
-## CLI
+## Live Preview
 
-We have small tool for previewing and PDF generation with ease. To use Paper CSS as a CLI tool, install it in global:
-
-```bash
-$ npm install --global paper-css
-```
-
-**Note**: to use Paper CSS as just CSS, you don't have to install CLI tool.
-
-`paper` has three subcommands:
-
-- [preview](#preview)
-- [create](#create)
-- [export](#export)
-
-### preview
-
-Preview your HTML file with live-reloading. The command below starts the preview server and open the HTML document in your browser automatically:
+Install [live-server](https://github.com/tapio/live-server):
 
 ```bash
-$ paper preview <file>
+$ npm install --global live-server
 ```
 
-You can also omit `preview` subcommand. Simply type like this:
+Then, preview your HTML file:
 
 ```bash
-$ paper <file>
+$ live-server your-document.html
 ```
 
-If you have no document yet, check [our examples](examples/) and the next section.
+Your browser will open the document. And the browser will automatically reload the page when changes are detected.
 
-**Note**: `paper preview` doesn't have any option at this point.
+See more detail and all options [here](https://github.com/tapio/live-server#usage-from-command-line).
 
-### create
+## PDF Generation
+
+Install [electron-pdf](https://github.com/fraserxu/electron-pdf):
 
 ```bash
-$ paper create <file>
+$ npm install --global electron-pdf
 ```
 
-Or use this shortcut: `$ paper c <file>`
-
-All options are optional.
-
-- `--size` or `-s`: page size - `A4`, `A5`, `A3`
-- `--padding`: padding - `10mm`, `15mm`, `20mm`, `25mm`, `none`
-- `--landscape` or `-l`: landscape mode
-
-### export
-
-Export your HTML as PDF. The command below generates a PDF file.
+Then, generate a PDF file from your HTML file:
 
 ```bash
-$ paper export <file>
+$ electron-pdf your-document.html your-document.pdf
 ```
 
-Or use this shortcut: `$ paper e <file>`
+See more details and all options [here](https://github.com/fraserxu/electron-pdf#all-available-options).
 
-All options are optional.
-
-- `--size` or `-s`: page size - `A4`, `A5`, `A3`
-- `--landscape` or `-l`: in landscape orientation
-- `--background` or `-b`: with background images or color
-- `--wait`: waiting time (msec) before printing
-- `--output` or `-o`: where to export PDF
-
-**Note**: *the value in CSS* is prior over options above, so you don't have to set `--size` or `--landscape` basically.
-
-Here's an example of usage:
-
-```bash
-$ paper export your-document.html --background --wait 3000 --output any/location/your-document.pdf
-```
-
-## Try
-
-If you haven't have our CLI yet, install it:
-
-```bash
-$ npm install --global paper-css
-```
-
-Create an empty HTML document:
-
-```bash
-$ paper create first.html --size A5 --landscape
-
-```
-
-Open it in your favorite editor and open preview in the browser:
-
-```bash
-$ atom first.html
-$ paper first.html
-```
-
-Edit the file and save your change. Then the preview will be automatically reloaded. To export it as PDF, type a command below:
-
-```bash
-$ paper export first.html
-```
+**Note**: we used to provide a small CLI tool `paper-css` while `v0.2.x`, we've dropped it in favor of `electron-pdf` which is a better option to do the same, basically.
 
 ## Why Paper CSS?
 
 ### Previewable
 
-You can check the design and layout before printing. See the browser like when you build a webpage.
+You can check the design and layout before printing. See the browser like when you build a web page.
 
 ![Preview](images/preview.png)
 
@@ -187,7 +116,7 @@ You can check the design and layout before printing. See the browser like when y
 
 ### Live-reloading
 
-It's just HTML/CSS, so we can edit it with live-reloading. See [preview](#preview) section above.
+It's just HTML/CSS, so we can edit it with live-reloading. See [Live Preview](#live-preview) section above.
 
 ![Live reloading](images/live-reload.png)
 
