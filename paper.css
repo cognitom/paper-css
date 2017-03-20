@@ -9,18 +9,21 @@ body { margin: 0 }
 }
 
 /** Paper sizes **/
-body.A3           .sheet { width: 297mm; height: 419mm }
-body.A3.landscape .sheet { width: 420mm; height: 296mm }
-body.A4           .sheet { width: 210mm; height: 296mm }
-body.A4.landscape .sheet { width: 297mm; height: 209mm }
-body.A5           .sheet { width: 148mm; height: 209mm }
-body.A5.landscape .sheet { width: 210mm; height: 147mm }
+body.A3           .sheet { width: 297mm; height: 419mm;margin-left: auto; margin-right: auto; }
+body.A3.landscape .sheet { width: 420mm; height: 296mm;margin-left: auto; margin-right: auto; }
+body.A4           .sheet { width: 210mm; height: 296mm;margin-left: auto; margin-right: auto; }
+body.A4.landscape .sheet { width: 297mm; height: 209mm;margin-left: auto; margin-right: auto; }
+body.A5           .sheet { width: 148mm; height: 209mm;margin-left: auto; margin-right: auto; }
+body.A5.landscape .sheet { width: 210mm; height: 147mm;margin-left: auto; margin-right: auto; }
 
 /** Padding area **/
 .sheet.padding-10mm { padding: 10mm }
 .sheet.padding-15mm { padding: 15mm }
 .sheet.padding-20mm { padding: 20mm }
 .sheet.padding-25mm { padding: 25mm }
+
+/** Better used on wkhtmltopdf **/
+.sheet.continuous { margin: 0 }
 
 /** For screen preview **/
 @media screen {
