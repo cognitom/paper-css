@@ -28,7 +28,7 @@ body.A5.landscape .sheet { width: 210mm; height: 147mm }
   .sheet {
     background: white;
     box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
-    margin: 5mm;
+    margin: 5mm auto;
   }
 }
 
