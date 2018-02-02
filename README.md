@@ -64,6 +64,14 @@ Set the class of `<body>` and also set "sheet" for each sheet.
 </body>
 ```
 
+All available page sizes is listed below:
+
+- A5, A5 landscape
+- A4, A4 landscape
+- A3, A3 landscape
+- letter, letter landscape
+- legal, legal landscape
+
 See also [the examples](examples/) for detail.
 
 ## Live Preview
