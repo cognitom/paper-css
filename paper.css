@@ -7,6 +7,9 @@ body { margin: 0 }
   box-sizing: border-box;
   page-break-after: always;
 }
+@media print {
+  .no-print { display: none !important; }
+}
 
 /** Paper sizes **/
 body.A3               .sheet { width: 297mm; height: 419mm }
