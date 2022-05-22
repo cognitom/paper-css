@@ -23,7 +23,7 @@ Recently, we say "front-end" every day. Then why don't we make the printing docu
 Get Paper CSS from [cdnjs](https://cdnjs.com/libraries/paper-css) (recommended):
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
 ```
 
 Or download [paper.css](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css) file from GitHub manually, or via npm:
