@@ -23,7 +23,7 @@ Recently, we say "front-end" every day. Then why don't we make the printing docu
 Get Paper CSS from [cdnjs](https://cdnjs.com/libraries/paper-css) (recommended):
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
 ```
 
 Or download [paper.css](https://raw.githubusercontent.com/cognitom/paper-css/master/paper.css) file from GitHub manually, or via npm:
@@ -66,6 +66,7 @@ Set the class of `<body>` and also set "sheet" for each sheet.
 
 All available page sizes is listed below:
 
+- A6, A6 landscape
 - A5, A5 landscape
 - A4, A4 landscape
 - A3, A3 landscape
